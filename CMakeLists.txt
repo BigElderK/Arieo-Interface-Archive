@@ -4,7 +4,7 @@ include($ENV{ARIEO_PACKAGE_BUILDENV_INSTALL_FOLDER}/cmake/build_environment.cmak
 project(ArieoEngine)
 
 arieo_engine_project(
-    arieo_engine_archive_interface
+    arieo_archive_interface
     ROOT_NAMESPACE Arieo::Interface::Archive
     SCRIPT_PACKAGE_NAME arieo:archive
     PROJECT_TYPE interface
@@ -12,8 +12,8 @@ arieo_engine_project(
         ${CMAKE_CURRENT_SOURCE_DIR}/public/include
     PACKAGES
         ArieoEngine-Core
-    LIBS
-        ArieoEngine-Core::arieo_engine_core
+    INTERFACES
+        ArieoEngine-Core::arieo_core
     AST_GENERATE_FOLDER
         ${CMAKE_CURRENT_SOURCE_DIR}/_generated/ast
     NATIVE_CODE_GENERATE_FOLDER
