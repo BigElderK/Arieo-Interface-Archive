@@ -5,15 +5,19 @@ project(ArieoEngine)
 
 arieo_engine_project(
     arieo_archive_interface
-    ROOT_NAMESPACE Arieo::Interface::Archive
-    SCRIPT_PACKAGE_NAME arieo:archive
     PROJECT_TYPE interface
-    PUBLIC_INCLUDE_FOLDERS
-        ${CMAKE_CURRENT_SOURCE_DIR}/public/include
+
     PACKAGES
         Arieo-Core
-    INTERFACES
+    PRIVATE_LIBS
         Arieo-Core::arieo_core
+
+    PUBLIC_INCLUDE_FOLDERS
+        ${CMAKE_CURRENT_SOURCE_DIR}/public/include
+        
+    ROOT_NAMESPACE Arieo::Interface::Archive
+    SCRIPT_PACKAGE_NAME arieo:archive
+
     AST_GENERATE_FOLDER
         ${CMAKE_CURRENT_SOURCE_DIR}/_generated/ast
     NATIVE_CODE_GENERATE_FOLDER

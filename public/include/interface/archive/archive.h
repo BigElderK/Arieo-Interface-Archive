@@ -1,5 +1,6 @@
 #pragma once
 #include <filesystem>
+#include <tuple>
 namespace Arieo::Interface::Archive
 {
     class IArchive
