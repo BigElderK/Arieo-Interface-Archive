@@ -5,12 +5,11 @@ include($ENV{ARIEO_BUILD_ENV_PACKAGES_OUTPUT_DIR}/cmake/build_environment.cmake)
 ARIEO_PACKAGE(
     Arieo-Interface-Archive
     CATEGORY 02_engine
-    COMPONENTS
-        arieo_archive_interface
 )
 
 ARIEO_ENGINE_PROJECT(
     arieo_archive_interface
+
     PROJECT_TYPE interface
 
     DEPENDENCIES
