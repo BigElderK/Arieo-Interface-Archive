@@ -1,5 +1,5 @@
 #pragma once
-#include "base/interface/interface.h"
+#include "base/interop/interface.h"
 
 namespace Arieo::Interface::Archive
 {
